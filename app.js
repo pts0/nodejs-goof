@@ -4,7 +4,7 @@
 
 // mongoose setup
 require('./mongoose-db');
-require('./typeorm-db')
+// require('./typeorm-db')
 
 var st = require('st');
 var crypto = require('crypto');
@@ -19,7 +19,6 @@ var logger = require('morgan');
 var errorHandler = require('errorhandler');
 var optional = require('optional');
 var marked = require('marked');
-var fileUpload = require('express-fileupload');
 var dust = require('dustjs-linkedin');
 var dustHelpers = require('dustjs-helpers');
 var cons = require('consolidate');
@@ -46,7 +45,7 @@ app.use(session({
 }))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(fileUpload());
+// app.use(fileUpload());
 
 // Routes
 app.use(routes.current_user);
